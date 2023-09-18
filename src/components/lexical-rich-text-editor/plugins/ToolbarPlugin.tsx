@@ -53,19 +53,6 @@ const supportedBlockTypes = new Set([
   "ol",
 ]);
 
-const blockTypeToBlockName = {
-  code: "Code Block",
-  h1: "Large Heading",
-  h2: "Small Heading",
-  h3: "Heading",
-  h4: "Heading",
-  h5: "Heading",
-  ol: "Numbered List",
-  paragraph: "Normal",
-  quote: "Quote",
-  ul: "Bulleted List",
-};
-
 function Divider() {
   return <div className="divider" />;
 }
@@ -505,7 +492,7 @@ export default function ToolbarPlugin() {
       }),
       editor.registerCommand(
         SELECTION_CHANGE_COMMAND,
-        (_payload, newEditor) => {
+        (_payload) => {
           updateToolbar();
           return false;
         },

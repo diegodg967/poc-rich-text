@@ -15,7 +15,6 @@ import { HeadingNode, QuoteNode } from "@lexical/rich-text";
 import { TableCellNode, TableNode, TableRowNode } from "@lexical/table";
 import { ListItemNode, ListNode } from "@lexical/list";
 import { CodeHighlightNode, CodeNode } from "@lexical/code";
-import { $generateHtmlFromNodes } from "@lexical/html";
 import { AutoLinkNode, LinkNode } from "@lexical/link";
 import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
@@ -798,7 +797,6 @@ export interface EditorProps {
 }
 
 export default function Editor({
-  onPublished,
   editable = true,
   initalEditorState,
 }: EditorProps) {
@@ -818,7 +816,7 @@ export default function Editor({
       // The editor theme
       theme: ExampleTheme,
       // Handling of errors during update
-      onError(error: Error, editor: LexicalEditor) {
+      onError(error: Error) {
         throw error;
       },
       // Any custom nodes go here
