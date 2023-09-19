@@ -32,6 +32,28 @@ import { EditorState } from "lexical";
 import { CustomHeadingNode } from "./nodes";
 import { createGlobalStyle } from "styled-components";
 
+import happySmile from "../../images/emoji/1F642.png";
+import chevronDown from "../../images/icons/chevron-down.svg";
+import textParagraph from "../../images/icons/text-paragraph.svg";
+import typeH1 from "../../images/icons/type-h1.svg";
+import typeH2 from "../../images/icons/type-h2.svg";
+import chatSquareQuote from "../../images/icons/chat-square-quote.svg";
+import listUl from "../../images/icons/list-ul.svg";
+import listOl from "../../images/icons/list-ol.svg";
+import code from "../../images/icons/code.svg";
+import pencilFill from "../../images/icons/pencil-fill.svg";
+import arrowPointerClockwise from "../../images/icons/arrow-counterclockwise.svg";
+import arrowClockwise from "../../images/icons/arrow-clockwise.svg";
+import typeBold from "../../images/icons/type-bold.svg";
+import typeItalic from "../../images/icons/type-italic.svg";
+import typeUnderline from "../../images/icons/type-underline.svg";
+import typeStrikethrough from "../../images/icons/type-strikethrough.svg";
+import link from "../../images/icons/link.svg";
+import textLeft from "../../images/icons/text-left.svg";
+import textCenter from "../../images/icons/text-center.svg";
+import textRight from "../../images/icons/text-right.svg";
+import justify from "../../images/icons/justify.svg";
+
 const GlobalStyles = createGlobalStyle`
 body {
   margin: 0;
@@ -375,7 +397,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .emoji.happysmile {
-  background-image: url(./images/emoji/1F642.png);
+  background-image: url(${happySmile});
 }
 
 .toolbar {
@@ -507,7 +529,7 @@ i.chevron-down {
   display: inline-block;
   height: 8px;
   width: 8px;
-  background-image: url(images/icons/chevron-down.svg);
+  background-image: url(${chevronDown});
 }
 
 #block-controls button:hover {
@@ -527,31 +549,31 @@ i.chevron-down {
 }
 
 #block-controls span.block-type.paragraph {
-  background-image: url(images/icons/text-paragraph.svg);
+  background-image: url(${textParagraph});
 }
 
 #block-controls span.block-type.h1 {
-  background-image: url(images/icons/type-h1.svg);
+  background-image: url(${typeH1});
 }
 
 #block-controls span.block-type.h2 {
-  background-image: url(images/icons/type-h2.svg);
+  background-image: url(${typeH2});
 }
 
 #block-controls span.block-type.quote {
-  background-image: url(images/icons/chat-square-quote.svg);
+  background-image: url(${chatSquareQuote});
 }
 
 #block-controls span.block-type.ul {
-  background-image: url(images/icons/list-ul.svg);
+  background-image: url(${listUl});
 }
 
 #block-controls span.block-type.ol {
-  background-image: url(images/icons/list-ol.svg);
+  background-image: url(${listOl});
 }
 
 #block-controls span.block-type.code {
-  background-image: url(images/icons/code.svg);
+  background-image: url(${code});
 }
 
 .dropdown {
@@ -652,7 +674,7 @@ i.chevron-down {
 }
 
 .link-editor div.link-edit {
-  background-image: url(images/icons/pencil-fill.svg);
+  background-image: url(${pencilFill});
   background-size: 16px;
   background-position: center;
   background-repeat: no-repeat;
@@ -706,83 +728,83 @@ i.chevron-down {
 }
 
 i.undo {
-  background-image: url(images/icons/arrow-counterclockwise.svg);
+  background-image: url(${arrowPointerClockwise});
 }
 
 i.redo {
-  background-image: url(images/icons/arrow-clockwise.svg);
+  background-image: url(${arrowClockwise});
 }
 
 .icon.paragraph {
-  background-image: url(images/icons/text-paragraph.svg);
+  background-image: url(${textParagraph});
 }
 
 .icon.large-heading,
 .icon.h1 {
-  background-image: url(images/icons/type-h1.svg);
+  background-image: url(${typeH1});
 }
 
 .icon.small-heading,
 .icon.h2 {
-  background-image: url(images/icons/type-h2.svg);
+  background-image: url(${typeH2});
 }
 
 .icon.bullet-list,
 .icon.ul {
-  background-image: url(images/icons/list-ul.svg);
+  background-image: url(${listUl});
 }
 
 .icon.numbered-list,
 .icon.ol {
-  background-image: url(images/icons/list-ol.svg);
+  background-image: url(${listOl});
 }
 
 .icon.quote {
-  background-image: url(images/icons/chat-square-quote.svg);
+  background-image: url(${chatSquareQuote});
 }
 
 .icon.code {
-  background-image: url(images/icons/code.svg);
+  background-image: url(${code});
 }
 
 i.bold {
-  background-image: url(images/icons/type-bold.svg);
+  background-image: url(${typeBold});
 }
 
 i.italic {
-  background-image: url(images/icons/type-italic.svg);
+  background-image: url(${typeItalic});
 }
 
 i.underline {
-  background-image: url(images/icons/type-underline.svg);
+  background-image: url(${typeUnderline});
 }
 
 i.strikethrough {
-  background-image: url(images/icons/type-strikethrough.svg);
+  background-image: url(${typeStrikethrough});
 }
 
 i.code {
-  background-image: url(images/icons/code.svg);
+  background-image: url(${code});
 }
 
 i.link {
-  background-image: url(images/icons/link.svg);
+  background-image: url(${link});
 }
 
 i.left-align {
-  background-image: url(images/icons/text-left.svg);
+  background-image: url(${textLeft});
 }
 
 i.center-align {
-  background-image: url(images/icons/text-center.svg);
+  background-image: url(${textCenter});
 }
 
 i.right-align {
-  background-image: url(images/icons/text-right.svg);
+  background-image: url(${textRight});
 }
 
 i.justify-align {
-  background-image: url(images/icons/justify.svg);
+  background-image: url(${justify});
 }
 `;
 
